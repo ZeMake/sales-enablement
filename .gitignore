@@ -1,0 +1,32 @@
+# deps
+node_modules/
+.pnpm-store/
+
+# build
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+.vitest/
+coverage/
+
+# segredos
+.env
+.env.*
+!.env.example
+
+# dados reais (ficam no PC)
+/data/
+/snapshot/
+public/videos/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.webm
+*.mp4
+
+# sistema
+.DS_Store
