@@ -1,0 +1,21 @@
+# O Vercel CLI NÃO usa o .gitignore: o que não estiver bloqueado aqui sobe no deploy.
+# Sobem SÓ os dados que a versão de validação precisa, montados por `pnpm deploy:prepare`:
+#   snapshot/app.db  (cópia do banco, aberta só leitura)
+#   public/videos/   (vídeos comprimidos, atrás do login)
+# O resto dos dados reais fica no PC.
+/data/
+/out/
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.webm
+
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Lixo de build local
+*.tsbuildinfo
+/.next/

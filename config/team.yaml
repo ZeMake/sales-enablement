@@ -1,0 +1,34 @@
+# Time comercial. `aliases` = como o nome aparece na transcrição e no nome do arquivo.
+# Contatos (whatsapp/slack) ficam vazios até ligarmos os notifiers.
+pessoas:
+  - id: victor
+    nome: Victor
+    papeis: [admin, gestor]
+    aliases: [Victor]
+    whatsapp: ""   # TODO
+    slack: ""      # TODO
+
+  - id: andrey
+    nome: Andrey
+    papeis: [gestor]
+    aliases: [Andrey]
+    whatsapp: ""   # TODO
+    slack: ""      # TODO
+
+  - id: elisangela
+    nome: Elisangela Oliveira
+    papeis: [closer]
+    gestores: [victor, andrey]
+    aliases: [Elisangela Oliveira, Elisangela, Elisângela, Eli]
+
+  - id: jessica
+    nome: Jéssica Araújo
+    papeis: [closer]
+    gestores: [victor, andrey]
+    aliases: [Jéssica Araújo, Jessica Araujo, Jéssica, Jessica]
+
+  - id: luan
+    nome: Luan Fernando
+    papeis: [closer]
+    gestores: [victor, andrey]
+    aliases: [Luan Fernando, Luan, Lua]

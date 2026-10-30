@@ -1,0 +1,1 @@
+ALTER TABLE `jobs` ADD `trava_ate` integer;

@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Tema escuro por classe .dark no <html> (alternado no cabeçalho; padrão = preferência do sistema). */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
+  --font-heading: var(--font-display);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  /* Semânticas do domínio */
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-crit: var(--crit);
+  --color-closer: var(--closer);
+  --color-lead: var(--lead);
+  --color-other: var(--other);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Laranja Make, direto da logo: #ff8000 → #ff9a00. Único acento forte do sistema. */
+:root {
+  --font-display: "Anton", "Impact", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-code: "IBM Plex Mono", ui-monospace, monospace;
+  --brand-from: #ff8000;
+  --brand-to: #ff9a00;
+  --brand-grad: linear-gradient(100deg, var(--brand-from), var(--brand-to));
+}
+
+/* Claro: papel quente, tinta quase preta. */
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.972 0.006 75);
+  --foreground: oklch(0.19 0.012 55);
+  --card: oklch(0.996 0.003 80);
+  --card-foreground: oklch(0.19 0.012 55);
+  --popover: oklch(0.996 0.003 80);
+  --popover-foreground: oklch(0.19 0.012 55);
+  --primary: oklch(0.7 0.19 50);
+  --primary-foreground: oklch(0.99 0.005 80);
+  --secondary: oklch(0.935 0.008 75);
+  --secondary-foreground: oklch(0.22 0.012 55);
+  --muted: oklch(0.94 0.007 75);
+  --muted-foreground: oklch(0.48 0.015 55);
+  --accent: oklch(0.94 0.04 65);
+  --accent-foreground: oklch(0.22 0.02 55);
+  --destructive: oklch(0.56 0.2 27);
+  --border: oklch(0.89 0.01 70);
+  --input: oklch(0.87 0.012 70);
+  --ring: oklch(0.7 0.19 50);
+  --ok: oklch(0.56 0.14 152);
+  --warn: oklch(0.68 0.15 72);
+  --crit: oklch(0.56 0.21 27);
+  --closer: oklch(0.7 0.19 50);
+  --lead: oklch(0.55 0.13 240);
+  --other: oklch(0.62 0.02 60);
+  --chart-1: oklch(0.7 0.19 50);
+  --chart-2: oklch(0.55 0.13 240);
+  --chart-3: oklch(0.56 0.14 152);
+  --chart-4: oklch(0.56 0.21 27);
+  --chart-5: oklch(0.62 0.02 60);
+  --panel-shadow: 0 1px 0 oklch(1 0 0 / 70%) inset, 0 1px 2px oklch(0.2 0.02 55 / 6%), 0 14px 32px -18px oklch(0.3 0.04 55 / 22%);
+  --panel-sheen: linear-gradient(180deg, oklch(1 0 0 / 60%), transparent 38%);
+}
+
+/* Escuro (padrão): tinta profunda com brilho laranja — o painel de comando. */
+.dark {
+  --background: oklch(0.13 0.012 52);
+  --foreground: oklch(0.96 0.006 80);
+  --card: oklch(0.17 0.013 52);
+  --card-foreground: oklch(0.96 0.006 80);
+  --popover: oklch(0.19 0.014 52);
+  --popover-foreground: oklch(0.96 0.006 80);
+  --primary: oklch(0.74 0.185 55);
+  --primary-foreground: oklch(0.15 0.02 50);
+  --secondary: oklch(0.22 0.014 52);
+  --secondary-foreground: oklch(0.94 0.006 80);
+  --muted: oklch(0.21 0.012 52);
+  --muted-foreground: oklch(0.69 0.016 70);
+  --accent: oklch(0.27 0.05 55);
+  --accent-foreground: oklch(0.96 0.006 80);
+  --destructive: oklch(0.66 0.2 25);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 13%);
+  --ring: oklch(0.74 0.185 55);
+  --ok: oklch(0.74 0.16 152);
+  --warn: oklch(0.82 0.15 82);
+  --crit: oklch(0.68 0.2 25);
+  --closer: oklch(0.74 0.185 55);
+  --lead: oklch(0.72 0.13 235);
+  --other: oklch(0.6 0.02 70);
+  --chart-1: oklch(0.74 0.185 55);
+  --chart-2: oklch(0.72 0.13 235);
+  --chart-3: oklch(0.74 0.16 152);
+  --chart-4: oklch(0.68 0.2 25);
+  --chart-5: oklch(0.6 0.02 70);
+  --panel-shadow: 0 1px 0 oklch(1 0 0 / 5%) inset, 0 0 0 1px oklch(0 0 0 / 20%), 0 18px 40px -22px oklch(0 0 0 / 70%);
+  --panel-sheen: linear-gradient(180deg, oklch(1 0 0 / 3.5%), transparent 42%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "tnum" 1, "ss01" 1;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  /* Rótulo pequeno: mono, caixa alta, espaçado, com traço laranja. */
+  .eyebrow {
+    @apply font-mono text-[10.5px] uppercase tracking-[0.22em] text-muted-foreground flex items-center gap-2;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-5;
+    background: var(--brand-grad);
+  }
+  .display {
+    @apply font-heading uppercase leading-[0.9] tracking-tight;
+  }
+  /* Card premium: borda fina, brilho no topo, sombra longa. */
+  .panel {
+    @apply rounded-xl border bg-card;
+    background-image: var(--panel-sheen);
+    box-shadow: var(--panel-shadow);
+  }
+  /* Card de destaque (alertas, insight): lavagem laranja + o "///" da marca como marca d'água. */
+  .panel-hero {
+    @apply relative overflow-hidden rounded-xl border bg-card;
+    box-shadow: var(--panel-shadow);
+    background-image:
+      radial-gradient(120% 140% at 0% 0%, oklch(0.74 0.185 55 / 0.14), transparent 55%),
+      var(--panel-sheen);
+  }
+  .panel-hero::after {
+    content: "///";
+    @apply pointer-events-none absolute -right-2 -bottom-10 font-heading leading-none select-none;
+    font-size: 11rem;
+    letter-spacing: -0.08em;
+    background: var(--brand-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0.16;
+    transform: skewX(-8deg);
+  }
+  /* Texto no degradê da marca. */
+  .text-brand {
+    background: var(--brand-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-brand {
+    background: var(--brand-grad);
+  }
+  /* Ícone de seção: círculo com aro laranja. */
+  .section-icon {
+    @apply grid size-8 shrink-0 place-items-center rounded-full text-primary;
+    background: radial-gradient(circle at 30% 25%, oklch(0.74 0.185 55 / 0.22), oklch(0.74 0.185 55 / 0.06));
+    box-shadow: 0 0 0 1px oklch(0.74 0.185 55 / 0.35) inset, 0 0 18px -6px oklch(0.74 0.185 55 / 0.6);
+  }
+  /* Pílula de navegação / seleção. */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:border-primary/40;
+  }
+  .pill-active {
+    @apply text-foreground border-primary/60;
+    background: linear-gradient(180deg, oklch(0.74 0.185 55 / 0.18), oklch(0.74 0.185 55 / 0.06));
+    box-shadow: 0 0 0 1px oklch(0.74 0.185 55 / 0.25) inset, 0 6px 20px -10px oklch(0.74 0.185 55 / 0.7);
+  }
+}
+
+/* Atmosfera: brilhos laranja + grade finíssima que some para baixo. Sem imagem. */
+body {
+  background-image:
+    radial-gradient(900px 420px at 92% -8%, oklch(0.74 0.185 55 / 0.10), transparent 60%),
+    radial-gradient(700px 380px at -5% 105%, oklch(0.74 0.185 55 / 0.06), transparent 60%);
+  background-attachment: fixed;
+}
+.dark body {
+  background-image:
+    radial-gradient(1000px 460px at 90% -10%, oklch(0.74 0.185 55 / 0.16), transparent 62%),
+    radial-gradient(800px 420px at -8% 110%, oklch(0.62 0.2 40 / 0.10), transparent 60%),
+    linear-gradient(oklch(1 0 0 / 2.2%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 2.2%) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  background-attachment: fixed;
+}
+
+/* Entrada da página: leve subida em cascata (respeita reduced-motion). */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.rise > * {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rise > *:nth-child(2) { animation-delay: 0.04s; }
+.rise > *:nth-child(3) { animation-delay: 0.08s; }
+.rise > *:nth-child(4) { animation-delay: 0.12s; }
+.rise > *:nth-child(5) { animation-delay: 0.16s; }
+.rise > *:nth-child(n + 6) { animation-delay: 0.2s; }
+
+/* Segmento da transcrição em destaque (evidência clicada ou momento do vídeo). */
+.seg-flash {
+  animation: seg-flash 1.6s ease-out;
+}
+@keyframes seg-flash {
+  0% { background-color: oklch(0.74 0.185 55 / 0.35); }
+  100% { background-color: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seg-flash,
+  .rise > * { animation: none; }
+}
+
+/* Versão de validação (READ_ONLY): controles de escrita ficam visíveis, mas inertes. */
+[data-readonly] .so-escrita {
+  pointer-events: none;
+  opacity: 0.55;
+}

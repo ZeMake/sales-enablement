@@ -1,0 +1,76 @@
+id: spiced
+nome: SPICED
+versao: 1
+regra_geral: >
+  O que conta é o que o LEAD disse. Afirmação do closer que o lead não confirmou
+  com conteúdo próprio não completa etapa.
+evidencia_do_lead_obrigatoria: true
+etapas:
+  - id: situacao
+    nome: Situação
+    em_uma_frase: "Como é o negócio dele hoje?"
+    por_que_importa: "É a base: sem contexto, a proposta vira genérica."
+    objetivo: Entender o contexto do negócio do lead.
+    completo_quando: >
+      O lead deu pelo menos 2 respostas substantivas sobre o contexto: modelo de negócio,
+      tamanho, faturamento/meta, canais de aquisição, time comercial, ferramentas atuais.
+    parcial_quando: Contexto superficial ou só o closer descreveu.
+    sinais_de_evidencia: [modelo de negócio, faturamento, meta, canais de aquisição, time comercial, ferramentas atuais, investimento em anúncio]
+    perguntas_exemplo:
+      - Como vocês captam clientes hoje?
+      - Qual o faturamento atual e onde querem chegar?
+      - Quem faz a parte comercial hoje e com quais ferramentas?
+    peso: 1
+
+  - id: dor
+    nome: Dor
+    em_uma_frase: "O que exatamente não funciona, e por quê?"
+    por_que_importa: "Sem a causa, a Make vira 'mais uma agência' que promete vender mais."
+    objetivo: Identificar o problema específico e a causa raiz, nas palavras do lead.
+    completo_quando: Problema específico E causa raiz, nas palavras do lead.
+    parcial_quando: Dor genérica ("quero vender mais") sem causa.
+    sinais_de_evidencia: [problema concreto, causa, tentativa anterior que falhou]
+    perguntas_exemplo:
+      - O que exatamente não está funcionando hoje?
+      - Por que você acha que isso acontece?
+    peso: 1
+
+  - id: impacto
+    nome: Impacto
+    em_uma_frase: "Quanto isso está custando para ele?"
+    por_que_importa: "Com número na mesa, o preço da Make parece pequeno perto do prejuízo."
+    objetivo: Fazer o lead verbalizar a consequência concreta e o custo de não resolver.
+    completo_quando: >
+      O LEAD verbalizou consequência concreta ou número (R$, leads, vendas, contratações, tempo),
+      idealmente o custo de não resolver.
+    parcial_quando: Impacto sugerido pelo closer e só confirmado com "sim".
+    sinais_de_evidencia: [valor em R$, número de leads/vendas, custo de não resolver]
+    perguntas_exemplo:
+      - Quanto isso está custando por mês para vocês?
+      - Se nada mudar nos próximos 6 meses, o que acontece?
+    peso: 1
+
+  - id: evento_critico
+    nome: Evento Crítico
+    em_uma_frase: "Até quando ele precisa resolver, e o que acontece se passar?"
+    por_que_importa: "É o que faz decidir agora em vez de 'vou pensar'. Desconto inventado pelo closer não conta."
+    objetivo: Descobrir até quando precisa resolver e o que acontece se não resolver.
+    completo_quando: Prazo COM consequência.
+    parcial_quando: Prazo sem consequência, ou "o quanto antes".
+    sinais_de_evidencia: [data, prazo, sazonalidade, meta com data]
+    perguntas_exemplo:
+      - Até quando isso precisa estar resolvido? O que acontece se passar dessa data?
+    peso: 1
+
+  - id: decisao
+    nome: Decisão
+    em_uma_frase: "Quem decide, com qual critério, e qual o próximo passo?"
+    por_que_importa: "Evita a proposta que 'vai passar para o sócio' e morre lá."
+    objetivo: Mapear decisores, critérios, processo e orçamento/alternativas.
+    completo_quando: Decisores, critérios de decisão, processo/próximo passo e orçamento ou alternativas avaliadas.
+    parcial_quando: Só parte disso.
+    sinais_de_evidencia: [quem decide, sócio, critério, orçamento, concorrente avaliado, próximo passo]
+    perguntas_exemplo:
+      - Além de você, quem participa dessa decisão?
+      - O que precisa ser verdade para vocês fecharem?
+    peso: 1

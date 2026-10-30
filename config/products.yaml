@@ -1,0 +1,163 @@
+# Base para detectar promessa indevida (risco de churn).
+# Fonte: Playbook de Vendas Make Vendas, Edição 01 (out/2026) — fichas de produto (cap. 02),
+# objeções (cap. 10), passagem de bastão (cap. 13), regras de ouro (cap. 15) e tabela de preços (cap. 16).
+# Itens marcados VALIDAR no playbook continuam pendentes de confirmação da gestão.
+fonte: Playbook de Vendas Make Vendas · Edição 01 · out/2026
+produtos:
+  - id: make_ads
+    nome: Make ADS
+    aliases: [MakeADS, Make Ads, tráfego pago]
+    entrega:
+      - Gestão de tráfego pago com IA proprietária em Meta, Google e TikTok
+      - Estratégia e plano de mídia; copy e criativos de imagem e vídeo
+      - Otimização diária com IA + analista de performance
+      - Setup de rastreamento no MakeCRM (UTM, origem, custo por venda)
+      - "Time: growth, copy, criação, tráfego, performance e account manager"
+      - "Remuneração por resultado: na oferta RQ só entra na fatura o que foi qualificado pelo critério do cliente (fatura auditável lead a lead)"
+      - MakeCRM incluso no pacote (R$ 150/mês no pacote)
+    prazos_reais:
+      - Primeiros resultados em 15 a 30 dias; otimização plena em 30 a 60 dias
+      - Trial de ~3 meses (M1 → M3), depois gradua para a Base; após o trial há mensalidade separada do investimento de mídia
+    nao_entrega:
+      - Não há resultado sem investimento em mídia (mínimo R$ 3.000/mês de mídia)
+      - Não garante número de leads, vendas, faturamento ou taxa de conversão
+      - Não resolve atendimento lento sozinho (sem Mavi/MakeSDR, mídia sem atendimento vira frustração)
+      - Não é para quem não responde lead no mesmo dia nem para nicho travado nas políticas de anúncio sem plano B
+    condicoes:
+      - Mídia a partir de R$ 3.000/mês, sem fee de gestão
+      - Sem fidelidade
+      - "Modelo de cobrança vigente por oferta (RQ x ciclo + mensalidade pós-trial) — VALIDAR"
+
+  - id: makecrm
+    nome: MakeCRM
+    aliases: [Make CRM, CRM]
+    entrega:
+      - WhatsApp, Instagram, Facebook e TikTok numa tela, com rastreio do anúncio até a venda
+      - Funis personalizáveis com SDR e closer por card; notas internas
+      - WhatsApp por QR Code (sem custo por mensagem) ou API Oficial
+      - Módulo de anúncios Meta com custo por venda e filtro reverso por campanha
+      - UTM automático, Google Calendar e app mobile
+      - Gravação, transcrição e resumo de reunião com IA
+      - Formulários de qualificação com score 0–100
+    prazos_reais: [Teste de 7 dias, implantação inclusa]
+    nao_entrega:
+      - Não gera leads sozinho (é controle e rastreio, não aquisição)
+    condicoes:
+      - "SaaS por usuário/mês: Starter R$ 100 · Growth R$ 150 · Business R$ 200; usuário adicional R$ 49,90; conexão de WhatsApp extra R$ 149,90"
+      - Sem multa de cancelamento; anual com desconto
+
+  - id: mavi
+    nome: Mavi
+    aliases: [MAVI, Mavi I.A, IA, agente de IA]
+    entrega:
+      - Agente de IA comercial que atende, qualifica e agenda 24/7 (WhatsApp, Direct, e-mail e ligação por WhatsApp)
+      - Conversa com cadência humana e persona com nome e tom da marca do cliente
+      - Qualificação pelo critério combinado, agendamento e follow-up automático
+      - Passagem para o humano com resumo; integração com o CRM e painel em tempo real
+    prazos_reais: []
+    nao_entrega:
+      - Não negocia nem fecha venda complexa sozinha
+      - Exige que o cliente escreva o critério de qualificação e acompanhe/revise as conversas
+      - "Não é 'a IA faz tudo sozinha'"
+    condicoes:
+      - "Starter R$ 350 (1 fluxo, 100 conversas) · Growth R$ 550 (2 fluxos, 200) · Plus R$ 900 (5 fluxos, 500) por mês"
+      - "O CRM registra 'MAVI I.A' a R$ 7.000 — confirmar se é implantação ou projeto (VALIDAR)"
+
+  - id: makesdr
+    nome: MakeSDR
+    aliases: [Make SDR, SDR]
+    entrega:
+      - IA 24/7 respondendo em segundos + SDR humano ligando para quem não respondeu
+      - Critério escrito com o comercial do cliente, agendamento automático e ajuste mensal de roteiro
+      - O vendedor recebe só oportunidade com horário marcado
+    prazos_reais: []
+    nao_entrega:
+      - Não substitui vendedor; negociação e fechamento continuam com o time do cliente
+      - Não funciona sem geração de demanda, sem agenda para reunião ou sem critério definido
+      - "Números (+60% resposta, −40% CPL, 71% qualificados) são MÉDIAS das operações e variam; só podem ser ditos com essa ressalva"
+    condicoes: ["R$ 5.500/mês + variável por qualificação"]
+
+  - id: kit_autoridade_digital
+    nome: Kit de Autoridade Digital
+    aliases: [Kit de Autoridade, Kit]
+    entrega:
+      - Site ou landing de alta performance, rápido no celular
+      - SEO para Google e buscas com IA
+      - Social media com rotina de publicação
+      - Integração de formulários e botões com o MakeCRM
+    prazos_reais: [SEO é médio prazo]
+    nao_entrega:
+      - Não é fonte de lead do mês 1 (SEO é médio prazo)
+    condicoes: ["R$ 1.950 — confirmar periodicidade e escopo (VALIDAR)"]
+
+  - id: social_leads
+    nome: Social Leads
+    aliases: [Social Leads]
+    entrega:
+      - 8 publicações por mês (2 por semana) com arte e texto + planejamento mensal
+      - Campanhas de geração de contato no Facebook e Instagram, com otimização contínua
+      - Lead em tempo real para o comercial + MakeCRM
+    prazos_reais:
+      - "Mês 1: perfil ativo, anúncio no ar, primeiros contatos; mês 2: ajustes; mês 3: conversa de escala"
+      - Avaliação justa em 3 meses; contrato mínimo de 3 meses
+    nao_entrega:
+      - Só Meta (não cobre busca no Google)
+      - Não é para quem quer retorno no primeiro mês nem para time grande esperando volume alto
+      - "Nunca chamar de 'programa de entrada' ou 'plano básico' (posicionamento: 'o seu start no digital')"
+    condicoes: ["R$ 1.900 · R$ 1.600 · R$ 1.300 por mês conforme o plano; mínimo 3 meses (CRM registra R$ 4.500 — VALIDAR)"]
+
+  - id: motor_de_vendas
+    nome: Motor de Vendas
+    aliases: [Acelerador de Lucros, ACL, Motor Comercial]
+    entrega:
+      - Estruturação comercial em 90 dias (evolução do Acelerador de Lucros)
+      - "Sem. 1–6: 6 sessões estratégicas de 2 h; sem. 7–12: encontros quinzenais de performance; dia 90: entrega das chaves (VALIDAR)"
+      - Plano de marketing integrado ao comercial; playbook, scripts de abordagem e follow-up; cadências, KPIs e direcionamento de tecnologia e IA
+    prazos_reais: [90 dias]
+    nao_entrega:
+      - Não é para quem ainda não vende (não há o que estruturar)
+      - "Números (+30% vendas, −25% ciclo, +40% conversão) são médias das turmas e variam; só com ressalva"
+    condicoes:
+      - "R$ 19.900 à vista ou 6× R$ 3.997 (material de set/2026 fala em 10× — VALIDAR)"
+      - "Garantia: 100% do investimento de volta se ao final não houver processo comercial estruturado e plano claro de execução (não é garantia de faturamento)"
+
+  - id: all_make
+    nome: ALL MAKE
+    aliases: [All Make, operação completa]
+    entrega: [Make ADS + Motor de Vendas + MakeSDR + MakeCRM]
+    prazos_reais: []
+    nao_entrega:
+      - Só faz sentido quando o raio-x prova as três dores (falta lead, lead não vira venda, sem processo)
+      - "Apresentar como 'a operação inteira', nunca como 'o pacote com tudo'"
+    condicoes: ["R$ 9.900/mês (R$ 6.900 + R$ 3.000 convertidos em mídia)"]
+
+  - id: avulsos
+    nome: Avulsos (Social Media, Landing Page, Make Bot)
+    aliases: [Social Media, Landing Page, Make Bot, MakeBot]
+    entrega:
+      - "Social Media: gestão de redes sem a camada de anúncio (R$ 7.800, periodicidade a confirmar)"
+      - "Landing Page: página única de conversão (R$ 997)"
+      - "Make Bot: automação de atendimento mais simples que a Mavi (R$ 300)"
+    prazos_reais: []
+    nao_entrega: []
+
+promessas_proibidas:
+  - Número garantido de faturamento, leads, vendas ou taxa de conversão
+  - Prazo de resultado menor que o do produto (ex.: resultado na primeira semana)
+  - "\"A IA faz tudo sozinha\" / \"você não vai precisar fazer nada\""
+  - Entrega fora do escopo contratado
+  - Desconto ou condição especial sem aprovação, ou com prazo inventado
+  - Case ou depoimento não confirmado (só case publicado ou com autorização escrita)
+  - Usar como garantia os números médios de produto (MakeSDR, Motor) sem a ressalva de média
+  - Usar nome, verba ou resultado de cliente da carteira sem autorização escrita
+
+politica_comercial:
+  preco: Preço só depois do espelho da dor; nada de valor antes do diagnóstico. Tabela interna nunca é enviada ao cliente — a proposta sai da R2.
+  desconto: "Desconto não se improvisa na reunião. Condição especial só com aprovação da gestão e com prazo real, nunca inventado."
+  fidelidade: "Make ADS sem fidelidade; MakeCRM sem multa; Social Leads mínimo de 3 meses; Motor de Vendas 90 dias com garantia."
+  garantias_permitidas: "Só o que está no contrato: no Make ADS, remuneração atrelada ao resultado e fatura auditável; no Motor, 100% de volta se não houver processo estruturado."
+  cases_publicados: "Bubble Box (Make ADS: +R$ 9 mi em vendas geradas), Grupo CR (Make ADS: +5 mil conversões), MBI | Microlins e Unifisa Consórcios (ACL), Clínica Viotto (operação remota)."
+  cases_proibidos: "Depoimentos do site sem lastro público (GranoFit, Café do Centro, Porto Frio, Ecovita, Bem Pet, Doces Cacauê, Doce & Fit, Grupo Solar Pisos, Fit Energy, Ótica Prisma) e logos de grandes marcas sem case publicado (Vivo, Claro, Chevrolet, Cyrela, Sicoob)."
+  numeros_oficiais: "18 anos (desde 2008), +5.000 empresas, 6 países. Não usar 17 anos, +4.900 ou +4.500."
+  nao_falar_mal: Não falar mal da agência atual nem de concorrente; mostrar a conta.
+  regra_do_dia_25: "Ao combinar o primeiro ciclo, o fim do ciclo deve cair até o dia 25 (22–25 amarelo; 26–31 vermelho)."

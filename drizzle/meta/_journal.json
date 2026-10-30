@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790800577856,
+      "tag": "0000_superb_polaris",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790818769671,
+      "tag": "0001_pink_nova",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790858333903,
+      "tag": "0002_lame_wildside",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790860618625,
+      "tag": "0003_numerous_ozymandias",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1790878926663,
+      "tag": "0004_material_kate_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1790879785247,
+      "tag": "0005_amused_talisman",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791413641405,
+      "tag": "0006_amusing_solo",
+      "breakpoints": true
+    }
+  ]
+}

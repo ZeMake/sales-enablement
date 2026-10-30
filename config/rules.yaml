@@ -1,0 +1,24 @@
+# Limiares do sistema. Valores iniciais PROVISÓRIOS — recalibrar com dados (Fase 4).
+versao: 1
+
+ingestao:
+  duracao_minima_min: 5          # abaixo disso a call é `nao_comercial` (não recebe nota)
+  palavras_por_minuto: 150       # usado para estimar tempo quando não há vídeo nem timestamps
+  ruido:
+    min_palavras: 25             # segmento só é avaliado como ruído a partir desse tamanho
+    max_trigramas_unicos: 0.8    # calibrado nas amostras: ruído 0,56–0,79; fala normal ≥ 0,81
+
+classificacao:
+  barra_minima_aderencia: 60     # PROVISÓRIO: calibrar com dados (Fase 4)
+  talk_ratio_max_closer: 0.65    # fração de fala do closer (fora do bastidor); se o tempo for estimado (sem timestamps), só gera alerta, nunca crítica
+  critica_se:                    # qualquer um => crítica
+    nota_abaixo_da_barra: true
+    churn_vermelho: true
+    talk_ratio_acima_do_max: true
+    nenhuma_etapa_completa: true
+  atencao_se:                    # qualquer um => atenção (se não for crítica)
+    nota_abaixo_de: 70
+    churn_amarelo: true
+    objecao_nao_resolvida: true
+    confianca_baixa: true
+    citacoes_descartadas_acima_de: 0.3   # fração das citações da IA que não existiam na transcrição

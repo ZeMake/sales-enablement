@@ -1,0 +1,208 @@
+# Playbook de Vendas Make Vendas — Edição 01 (out/2026), cap. 08 "R2 · o diagnóstico que fecha".
+# As etapas seguem a ordem da R2. Pesos são proposta inicial do sistema (Raio-X pesa mais por ser
+# 20 dos 45–60 min); ajustar na calibração.
+id: make-closer
+nome: Playbook Closer Make (R2)
+versao: 1
+regra_geral: >
+  A R2 não é apresentação de empresa: é um diagnóstico que o lead levaria mesmo se não comprasse.
+  O lead fala 70% do tempo. Preço só depois do espelho da dor. Nunca falar mal da agência ou do
+  fornecedor atual (mostre a conta). Desconto não se improvisa na reunião. Se não é pra ele, diga.
+  Venda a rota, não o catálogo: uma dor, uma rota principal, no máximo um complemento.
+evidencia_do_lead_obrigatoria: false
+etapas:
+  - id: abertura_acordo
+    nome: Abertura e acordo
+    em_uma_frase: "Combinamos como vai ser a conversa e quem decide?"
+    por_que_importa: "Quem decide precisa estar na call, e o lead sabe que no fim vai ouvir um sim ou não honesto."
+    objetivo: Combinar agenda, tempo e quem decide, e a regra do fim (o closer vai dizer com franqueza se a Make faz sentido).
+    completo_quando: >
+      O closer combinou a agenda da reunião, confirmou quem decide (e se está presente) e fez o acordo
+      de que no final dirá com franqueza se a Make faz sentido ou não — e o lead concordou.
+    parcial_quando: Houve alguma combinação de agenda ou de decisor, mas sem o acordo do fim, ou sem confirmar o decisor.
+    sinais_de_evidencia: [agenda da reunião, quem decide, sócio presente, "te digo com franqueza se faz sentido", combinado]
+    perguntas_exemplo:
+      - "A ideia é entender a operação de vocês nos primeiros vinte minutos, eu mostro o que enxerguei e, no final, te digo com franqueza se a Make faz sentido ou não. Combinado?"
+      - "Além de você, quem participa dessa decisão? Ele consegue estar aqui?"
+    peso: 1
+
+  - id: raio_x
+    nome: Raio-X (12 perguntas)
+    em_uma_frase: "Entendi a operação dele, nas palavras dele?"
+    por_que_importa: "Vale o dobro: tudo o que vem depois (conta, dor, rota) sai daqui."
+    objetivo: >
+      Entender a operação nas palavras do lead: aquisição, atendimento, conversão, time, controle,
+      histórico, meta e decisão. O lead fala; o closer pergunta, anota e cala.
+    evidencia_do_lead: true
+    completo_quando: >
+      O LEAD respondeu com conteúdo próprio sobre pelo menos 5 dos 8 blocos: Aquisição (canais, verba de
+      mídia, contatos/mês), Atendimento (quem responde, em quanto tempo, noite/fim de semana), Conversão
+      (de 10 conversas quantas viram venda, ticket, ciclo), Time (quantos vendem, roteiro, meta), Controle
+      (onde fica o histórico, sabe qual campanha vendeu), Histórico (o que já tentaram e por que não
+      funcionou), Meta (quanto quer vender a mais em 90 dias, dá conta do volume) e Decisão (como decidem,
+      quando querem começar). Incluir números quando o lead os tiver.
+    parcial_quando: O lead respondeu de 2 a 4 blocos, ou só de forma superficial, ou o closer descreveu a operação no lugar do lead.
+    sinais_de_evidencia: [canal de aquisição, verba de mídia, contatos por mês, tempo de resposta, taxa de conversão, ticket médio, ciclo de venda, tamanho do time, CRM/histórico, o que já tentaram, meta em número, como decidem]
+    perguntas_exemplo:
+      - "De onde vem o cliente novo hoje? Qual canal traz mais e qual traz melhor?"
+      - "Quanto vocês investem em mídia por mês? Quanto volta?"
+      - "Quem responde o lead, em quanto tempo, e o que acontece à noite e no fim de semana?"
+      - "De cada 10 conversas, quantas viram venda? Qual o ticket médio?"
+      - "Onde fica o histórico? Você sabe qual campanha virou venda no mês passado?"
+      - "O que já tentaram e por que não funcionou?"
+      - "Quanto querem vender a mais nos próximos 90 dias? Dá pra atender esse volume?"
+    peso: 2
+
+  - id: a_conta
+    nome: A conta (onde a venda vaza)
+    em_uma_frase: "Fizemos juntos a conta de quanto a venda vaza?"
+    por_que_importa: "Com os números DELE, o vazamento vira fato, não opinião do closer."
+    objetivo: >
+      Montar com o lead, com os números DELE, quanto a operação vende hoje e quanto está vazando
+      (leads/mês × % atendidos rápido × % qualificados × % fechamento × ticket).
+    evidencia_do_lead: true
+    completo_quando: >
+      O closer montou a conta com números fornecidos ou estimados junto com o lead (não benchmarks
+      genéricos nem números de outros clientes) e chegou a um valor de vendas/mês e do que está vazando.
+    parcial_quando: >
+      Houve alguma conta, mas com números do closer ou de outros clientes, sem os números do lead, ou sem
+      chegar ao valor do vazamento.
+    sinais_de_evidencia: [leads por mês, "% atendidos", "% fechamento", ticket, vendas no mês, quanto está vazando]
+    perguntas_exemplo:
+      - "Vamos fazer a conta com os seus números: chegam quantos contatos por mês, quantos são atendidos rápido e de cada 10 quantos fecham?"
+    peso: 1
+
+  - id: espelho_da_dor
+    nome: Espelho da dor + custo de não resolver
+    em_uma_frase: "Devolvi a dor com as palavras dele e o custo de não resolver?"
+    por_que_importa: "Quando o lead confirma o próprio problema, a solução vira consequência."
+    objetivo: Devolver a dor em três frases com as palavras do lead, mais o custo de não resolver, e obter a confirmação dele.
+    completo_quando: >
+      O closer resumiu a dor usando as palavras do lead, trouxe o custo de não resolver (valor ou
+      consequência concreta) e o lead confirmou com conteúdo ("isso", "é exatamente isso", acrescentando algo).
+    parcial_quando: Houve resumo, mas genérico, sem o custo de não resolver, ou sem confirmação do lead.
+    sinais_de_evidencia: ["resumindo com as suas palavras", custo de não resolver, "se isso continuar pelos próximos seis meses", confirmação do lead]
+    perguntas_exemplo:
+      - "Se isso continuar exatamente como está pelos próximos seis meses, o que acontece com a meta de vocês?"
+      - "Então, resumindo com as suas palavras: [dor 1], [dor 2] e você não sabe qual campanha vende. Pela nossa conta, isso deixa uns [valor] na mesa todo mês. Faz sentido?"
+    peso: 1
+
+  - id: a_rota
+    nome: A rota
+    em_uma_frase: "Mostrei uma rota, ligada ao que ele disse?"
+    por_que_importa: "Uma rota clara vende mais que o catálogo inteiro."
+    objetivo: >
+      Uma rota principal (no máximo um complemento), cada peça ligada a uma frase que o lead disse,
+      com uma prova do mesmo tipo de negócio. Vender a rota, não o catálogo.
+    completo_quando: >
+      O closer indicou uma rota principal coerente com o vazamento (máx. um complemento), ligou as peças a
+      falas do lead e usou uma prova/case publicado do mesmo tipo de negócio.
+    parcial_quando: >
+      Apresentou produto sem ligar às falas do lead, empilhou vários produtos (catálogo), ou não trouxe
+      prova do mesmo tipo de negócio.
+    sinais_de_evidencia: [rota principal, "você me falou que", case do mesmo segmento, um complemento]
+    perguntas_exemplo:
+      - "Você me contou que [frase dele]. É por isso que a rota começa por [produto]: [o que resolve]. Um cliente parecido, a [case publicado], tinha o mesmo cenário. Isso parece com o que vocês vivem hoje?"
+    peso: 1
+
+  - id: investimento
+    nome: Investimento
+    em_uma_frase: "Falei o preço depois da dor, claro, e fiquei em silêncio?"
+    por_que_importa: "Preço antes da dor parece caro; depois, parece investimento."
+    objetivo: Apresentar o preço depois do espelho da dor, dizer o número, a condição e o que está incluso, e ficar em silêncio.
+    completo_quando: >
+      O preço veio depois do espelho da dor, com valor, condição e o que está incluso, de forma clara e
+      sem desconto improvisado; se o lead reagiu, o closer voltou para a conta.
+    parcial_quando: >
+      Preço dito antes do diagnóstico/espelho, confuso, sem dizer o que está incluso, ou acompanhado de
+      desconto/condição especial improvisada na hora.
+    sinais_de_evidencia: [valor, condição, o que está incluso, volta pra conta]
+    perguntas_exemplo:
+      - "Pra fazer o que a gente desenhou, o investimento é [valor e condição], e inclui [itens]."
+      - "Quanto vale um cliente novo pra você?"
+    peso: 1
+
+  - id: decisao_proximo_passo
+    nome: Decisão e próximo passo
+    em_uma_frase: "Pedi a decisão ou saí com data marcada?"
+    por_que_importa: "Sem pergunta de fechamento nem data na agenda, a venda esfria."
+    objetivo: Fazer a pergunta de fechamento; se não fechar, sair com próximo passo com data, hora e decisor na agenda.
+    completo_quando: >
+      O closer fez uma pergunta de fechamento clara e, se não fechou, saiu com próximo passo com data e
+      hora combinadas e o decisor incluído (ex.: reunião marcada com o sócio).
+    parcial_quando: >
+      Houve pergunta de fechamento ou próximo passo, mas sem data/hora, sem o decisor, ou ficou em
+      "vamos se falando pelo WhatsApp" / "me manda a proposta".
+    sinais_de_evidencia: [pergunta de fechamento, data e hora, decisor na agenda, reunião marcada]
+    perguntas_exemplo:
+      - "Faz sentido pra vocês começarem por aqui? Se sim, a gente define o critério de qualificação e agenda o início do primeiro ciclo."
+      - "Faz mais sentido o primeiro ciclo começar dia 5 ou dia 10?"
+      - "Amanhã às [hora] ou quinta às [hora] funciona pra falarmos com o seu sócio junto?"
+    peso: 1
+
+# Cap. 10 — referência para avaliar como o closer tratou cada objeção.
+objecoes:
+  - objecao: "Tá caro."
+    por_tras: Comparou sem referência, ou não viu o retorno.
+    resposta: "Caro comparado a quê? Vamos pôr na conta: quanto vale um cliente novo pra você? E lembra que a nossa remuneração anda com o resultado."
+    devolva: "Quanto custa pra você continuar vendendo o que vende hoje?"
+  - objecao: "Já tenho agência."
+    por_tras: Medo de trocar e perder o que funciona.
+    resposta: "A Make não disputa post: assume do anúncio até a venda. Dá pra começar pela camada que falta (Mavi, MakeCRM) sem mexer no que funciona."
+    devolva: "A sua agência te mostra quanto cada campanha vendeu, não clicou?"
+  - objecao: "Já tentei tráfego e não deu certo."
+    por_tras: Experiência ruim, geralmente com vazamento no atendimento.
+    resposta: "O que não deu certo: não chegou contato, ou chegou e não virou venda? Na maioria das vezes a venda vaza no atendimento."
+    devolva: "Quanto tempo o lead esperava pra ser respondido naquela época?"
+  - objecao: "Vou pensar."
+    por_tras: Uma dúvida que ele não falou.
+    resposta: "O que ficou em aberto? É o investimento, o momento ou se vai funcionar pro seu negócio?"
+    devolva: "Se isso estivesse resolvido, você começaria? (e marcar a data da resposta)"
+  - objecao: "Preciso falar com meu sócio."
+    por_tras: O mandante não estava na R2 (erro da R1).
+    resposta: "O que você acha que ele vai perguntar? Em vez de você repassar, vamos marcar 20 minutos com ele junto."
+    devolva: "Amanhã às [hora] ou quinta às [hora] funciona pra ele?"
+  - objecao: "Não tenho verba agora."
+    por_tras: Aperto real ou prioridade baixa.
+    resposta: "Qual seria um valor confortável pra começar direito? Existem rotas mais enxutas (Social Leads, Mavi, Kit)."
+    devolva: "Quando entra a verba? Deixo a conversa marcada pra essa data."
+  - objecao: "Meu negócio é diferente. Vendo por indicação."
+    por_tras: Medo de que o digital não entenda o nicho.
+    resposta: "Indicação é ótimo sinal, mas não tem botão de volume. A gente começa estudando o seu negócio antes de ligar qualquer mídia."
+    devolva: "Se as indicações pararem por dois meses, o que acontece?"
+  - objecao: "IA vai espantar meu cliente."
+    por_tras: Experiência com robô de menu.
+    resposta: "A Mavi conversa com pausa e contexto, no tom da sua marca, e passa pra uma pessoa com o resumo. O que espanta é esperar três horas por resposta."
+    devolva: "Quer ver uma conversa real dela agora?"
+  - objecao: "Já tenho CRM."
+    por_tras: Custo de troca e medo de perder histórico.
+    resposta: "Se o seu CRM já mostra o custo por venda de cada anúncio e roda o WhatsApp sem extensão paga, ótimo. Se não, o MakeCRM tem teste de 7 dias e implantação inclusa."
+    devolva: "O seu CRM te mostra qual anúncio vendeu no mês passado?"
+  - objecao: "Me manda por e-mail que eu vejo."
+    por_tras: Vai adiar ou comparar só preço.
+    resposta: "Mando sim. Das três coisas que a gente conversou, qual é a mais importante? E já deixo 15 minutos marcados amanhã."
+    devolva: "Amanhã às [hora] fica bom pra gente repassar juntos?"
+  - objecao: "Em quanto tempo dá resultado?"
+    por_tras: Pressa, ou já foi enganado.
+    resposta: "Make ADS: primeiros resultados em 15 a 30 dias, otimização plena em 30 a 60. Social Leads: avaliação justa em 3 meses. Motor: 90 dias."
+    devolva: "Qual prazo faria sentido pra sua meta?"
+  - objecao: "Tem fidelidade? Contrato longo?"
+    por_tras: Medo de ficar preso.
+    resposta: "Make ADS não tem fidelidade, MakeCRM não tem multa, Social Leads pede 3 meses, Motor tem 90 dias com garantia."
+    devolva: "O que te deixaria seguro pra começar?"
+  - objecao: "Vocês garantem resultado?"
+    por_tras: Quer transferir o risco.
+    resposta: "Garantir faturamento em número seria mentira. O que a gente garante está no contrato: remuneração atrelada ao resultado e fatura auditável (Make ADS); 100% de volta se não houver processo estruturado (Motor)."
+    devolva: "Que resultado faria você considerar isso um sucesso em 90 dias?"
+  - objecao: "Não tenho tempo pra atender mais lead."
+    por_tras: O gargalo é o time, não a mídia.
+    resposta: "É por isso que a Mavi e o MakeSDR existem: a triagem sai do seu colo."
+    devolva: "Quantas horas por semana você gasta hoje respondendo curioso?"
+  - objecao: "Vocês são grandes. Vou ser só mais um."
+    por_tras: Medo de atendimento genérico.
+    resposta: "Time dedicado, account manager e reunião de alinhamento; o CS acompanha cada cliente num Health Score."
+    devolva: "O que você espera do atendimento pra se sentir bem cuidado?"
+  - objecao: "Meu nicho tem restrição no Facebook."
+    por_tras: Já teve conta bloqueada ou anúncio reprovado.
+    resposta: "Tem nicho que exige cuidado; às vezes a melhor rota é Google, SEO ou Mavi. Eu confirmo com o time de mídia antes de te prometer qualquer coisa."
+    devolva: "Vocês já tiveram conta bloqueada? Por qual motivo?"
